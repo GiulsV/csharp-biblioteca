@@ -2,7 +2,7 @@
 {
     public int NumPagine { get; set; }
 
-    public Libro(int NumPagine, int Id, string Titolo, int Anno, string Settore, bool InPrestito, string Scaffale, string Autore) : base(Id, Titolo, Anno, Settore, InPrestito, Scaffale, Autore)
+    public Libro(string Titolo, string Autore, int NumPagine) : base(Titolo, Autore)
     {
         this.NumPagine = NumPagine;
     }
