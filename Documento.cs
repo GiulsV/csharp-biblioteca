@@ -1,28 +1,26 @@
 ﻿public class Documento
 {
-    public int Id { get; set; }
-    public string Titolo { get; set; }
-    public int Anno { get; set; }
-    public string Settore { get; set; }
-    public bool InPrestito { get; set; }
-    public string Scaffale { get; set; }
-    public string Autore { get; set; }
+    public string Codice { get; set; }
+    public string Titolo { get; }
 
-    public Documento(string titolo, string autore)
+    public int Anno { get; set; }
+    public string Settore { get; }
+    public string Stato { get; set; }
+    public string Scaffale { get; set; }
+    public string Autore { get; }
+
+    public Documento(string codice, string titolo, int anno, string stato, string settore, string scaffale, string autore)
     {
-        Id = new Random().Next(100);
-        Titolo = titolo;
-        Autore = autore;
-        InPrestito = false;
-    }
-    public Documento(int id, string titolo, int anno, string settore, bool inPrestito, string scaffale, string autore)
-    {
-        Id = id;
+        Codice = codice;
         Titolo = titolo;
         Anno = anno;
+        Stato = stato;
         Settore = settore;
-        InPrestito = inPrestito;
         Scaffale = scaffale;
         Autore = autore;
+    }
+    public override string ToString()
+    {
+        return  Titolo + " Codice : " + Codice;
     }
 }

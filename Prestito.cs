@@ -1,15 +1,20 @@
 ﻿public class Prestito
 {
-    public string InizioPrestito { get; set; }
-    public string FinePrestito { get; set; }
-    public Client User { get; set; }
-    public Documento Document { get; set; }
+    public string PrestitoDal { get; }
+    public string PrestitoAl { get; }
+    public Utente Utente { get; set; }
 
-    public Prestito(string inizioPrestito, string finePrestito, Client user, Documento document)
+    public Documento Documento { get; set; }
+    public Prestito(string prestitoDal, string prestitoAl, Documento documento, Utente utente)
     {
-        InizioPrestito = inizioPrestito;
-        FinePrestito = finePrestito;
-        User = user;
-        Document = document;
+        this.PrestitoDal = prestitoDal;
+        this.PrestitoAl = prestitoAl;
+        this.Documento = documento;
+        this.Utente = utente;
+
+    }
+    public override string ToString()
+    {
+        return "dal " + PrestitoDal + " al " + PrestitoAl + ". Utente: " + Utente.Cognome + " " + Utente.Nome + ". Documento: " + Documento.Titolo;
     }
 }

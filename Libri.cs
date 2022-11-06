@@ -1,9 +1,9 @@
 ﻿public class Libro : Documento
 {
-    public int NumPagine { get; set; }
+    public int numPagine { get; }
 
-    public Libro(string Titolo, string Autore, int NumPagine) : base(Titolo, Autore)
+    public Libro(string codice, string titolo, int anno, string stato, string settore, string scaffale, string autore, int pagine) : base(codice, titolo, anno, stato, settore, scaffale, autore)
     {
-        this.NumPagine = NumPagine;
+        numPagine = pagine;
     }
 }

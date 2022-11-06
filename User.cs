@@ -1,17 +1,15 @@
-﻿public class Client
+﻿public class Utente
 {
-    public string Nome { get; set; }
+    public string Nome { get; }
     public string Cognome { get; set; }
     public string Email { get; set; }
-    public string Password { get; set; }
-    public string Phone { get; set; }
+    public string Telefono { get; set; }
 
-    public Client(string nome, string cognome, string email, string password, string phone)
+    public Utente(string nome, string cognome, string email, string telefono)
     {
-        Nome = nome;
-        Cognome = cognome;
-        Email = email;
-        Password = password;
-        Phone = phone;
+        this.Nome = nome;
+        this.Cognome = cognome;
+        this.Email = email;
+        this.Telefono = telefono;
     }
 }
